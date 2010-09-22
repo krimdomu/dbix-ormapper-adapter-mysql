@@ -17,7 +17,10 @@ use base qw(DM4P::Connection::Base);
 #   DM4P::Connection::MySQL
 sub new {
    my $that = shift;
+   my $proto = ref($that) || $that;
    my $self = $that->SUPER::new(@_);
+   
+   bless($self, $proto);
    
    $self->{'dbi-type'} = 'dbi';
 
