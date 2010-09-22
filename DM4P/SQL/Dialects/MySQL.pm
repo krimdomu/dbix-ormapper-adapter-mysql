@@ -7,6 +7,7 @@ use DM4P::SQL::Dialects::MySQL::SELECT;
 use DM4P::SQL::Dialects::MySQL::INSERT;
 use DM4P::SQL::Dialects::MySQL::DELETE;
 use DM4P::SQL::Dialects::MySQL::UPDATE;
+use DM4P::SQL::Dialects::MySQL::CREATE;
 
 use base qw(DM4P::SQL::Dialects::DialectBase);
 
