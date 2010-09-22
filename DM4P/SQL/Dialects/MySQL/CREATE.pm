@@ -59,4 +59,5 @@ sub get_field_type {
    return $type_class->get_sql_type();
 }
 
+
 1;
