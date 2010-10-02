@@ -58,4 +58,13 @@ sub connect {
 #    Internat Use.
 sub class_type { shift; return "MySQL"; }
 
+# Function: type
+#
+#    Returns the Database-Type.
+#
+# Returns:
+#
+#   String - Database-Type.
+sub type { shift; return "mysql"; }
+
 1;
