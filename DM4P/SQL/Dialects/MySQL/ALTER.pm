@@ -1,9 +1,9 @@
-package DM4P::SQL::Dialects::MySQL::CREATE;
+package DM4P::SQL::Dialects::MySQL::ALTER;
 
 use strict;
 use warnings;
 
-use base qw(DM4P::SQL::Dialects::MySQL DM4P::SQL::Dialects::Base::CREATE);
+use base qw(DM4P::SQL::Dialects::MySQL DM4P::SQL::Dialects::Base::ALTER);
 
 # ------------------------------------------------------------------------------
 # Group: Constructor
@@ -14,7 +14,7 @@ use base qw(DM4P::SQL::Dialects::MySQL DM4P::SQL::Dialects::Base::CREATE);
 #
 # Returns:
 #
-#   DM4P::SQL::Dialects::MySQL::CREATE
+#   DM4P::SQL::Dialects::MySQL::ALTER
 sub new {
    my $that = shift;
    my $proto = ref($that) || $that;
@@ -23,6 +23,5 @@ sub new {
    bless($self, $proto);
    return $self;
 }
-
 
 1;
