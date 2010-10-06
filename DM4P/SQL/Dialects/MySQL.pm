@@ -43,6 +43,8 @@ sub get_field_type {
    my $type = shift;
    my $args = shift;
 
+   return unless($type);
+
    my $class = "DM4P::SQL::Dialects::MySQL::Table::Column::Type::$type";
    my $class_file = "DM4P/SQL/Dialects/MySQL/Table/Column/Type/$type.pm";
    
