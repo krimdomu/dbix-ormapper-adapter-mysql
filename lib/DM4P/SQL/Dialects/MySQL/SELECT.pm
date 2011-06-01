@@ -24,5 +24,12 @@ sub new {
    return $self;
 }
 
+sub get_limit {
+   my $self = shift;
+   my $limit = shift;
+
+   return "LIMIT $limit";
+}
+
 
 1;
