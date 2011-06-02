@@ -44,6 +44,7 @@ sub connect {
    my $self = shift;
 
    $self->{'__db_connection'} = DBI->connect($self->dsn, $self->username, $self->password);
+   $dbh->{mysql_auto_reconnect} = 1;
    
    if(!$self->{'__db_connection'}) {
       DM4P::Exception::Connect->throw(error => 'Cannot connect to Database');
