@@ -51,8 +51,27 @@ sub connect {
       DM4P::Exception::Connect->throw(error => 'Cannot connect to Database');
       return 0;
    }
+
+   $self->SUPER::connect();
    
    return $self;
+}
+
+# Function: set_character_encoding
+#
+#   Set the character encoding.
+#
+# Parameters:
+#
+#   String
+sub set_character_encoding {
+   my $self = shift;
+   my $encoding = shift;
+
+   if($encoding =~ m/UTF\-8/) {
+      $self->{'__db_connection'}->{'mysql_enable_utf8'} = 1;
+      $self->{'__db_connection'}->do("SET NAMES utf8");
+   }
 }
 
 # Function: class_type
