@@ -1,21 +1,21 @@
-package DM4P::Connection::Server::MySQL;
+package DBIx::ORMapper::Connection::Server::MySQL;
 
 use strict;
 use warnings;
 
-use base qw(DM4P::Connection::Base);
-use DM4P::SQL::Dialects::MySQL;
+use base qw(DBIx::ORMapper::Connection::Base);
+use DBIx::ORMapper::SQL::Dialects::MySQL;
 
 # ------------------------------------------------------------------------------
 # Group: Constructor
 # ------------------------------------------------------------------------------
 # Function: new
 #
-#   Creates an new DM4P::Connection::MySQL Object.
+#   Creates an new DBIx::ORMapper::Connection::MySQL Object.
 #
 # Returns:
 #
-#   DM4P::Connection::MySQL
+#   DBIx::ORMapper::Connection::MySQL
 sub new {
    my $that = shift;
    my $proto = ref($that) || $that;
@@ -36,7 +36,7 @@ sub new {
 #
 #   Try to connect to the database.
 #
-#    Throws DM4P::Exception::Connect on connect error.
+#    Throws DBIx::ORMapper::Exception::Connect on connect error.
 #
 # Returns:
 #
@@ -48,7 +48,7 @@ sub connect {
    $self->{'__db_connection'}->{mysql_auto_reconnect} = 1;
    
    if(!$self->{'__db_connection'}) {
-      DM4P::Exception::Connect->throw(error => 'Cannot connect to Database');
+      DBIx::ORMapper::Exception::Connect->throw(error => 'Cannot connect to Database');
       return 0;
    }
 

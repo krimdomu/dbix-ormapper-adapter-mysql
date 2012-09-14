@@ -1,26 +1,31 @@
-package DM4P::SQL::Dialects::MySQL::ALTER;
+package DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::Text;
 
 use strict;
 use warnings;
 
-use base qw(DM4P::SQL::Dialects::MySQL DM4P::SQL::Dialects::Base::ALTER);
+use DBIx::ORMapper::SQL::Table::Column::Type::Base;
+
+use base qw(DBIx::ORMapper::SQL::Table::Column::Type::Base);
 
 # ------------------------------------------------------------------------------
 # Group: Constructor
 # ------------------------------------------------------------------------------
 # Function: new
 #
-#   Creates an new DM4P::SQL::Query Object.
+#   Creates the DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::Text Object.
 #
 # Returns:
 #
-#   DM4P::SQL::Dialects::MySQL::ALTER
+#   DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::Text
 sub new {
    my $that = shift;
    my $proto = ref($that) || $that;
    my $self = $that->SUPER::new(@_);
    
    bless($self, $proto);
+   
+   $self->{'__sql_type'} = 'text';
+   
    return $self;
 }
 

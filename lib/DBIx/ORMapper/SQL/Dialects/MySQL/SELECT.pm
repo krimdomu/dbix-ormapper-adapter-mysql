@@ -1,32 +1,35 @@
-package DM4P::SQL::Dialects::MySQL::Table::Column::Type::Text;
+package DBIx::ORMapper::SQL::Dialects::MySQL::SELECT;
 
 use strict;
 use warnings;
 
-use DM4P::SQL::Table::Column::Type::Base;
-
-use base qw(DM4P::SQL::Table::Column::Type::Base);
+use base qw(DBIx::ORMapper::SQL::Dialects::MySQL DBIx::ORMapper::SQL::Dialects::Base::SELECT);
 
 # ------------------------------------------------------------------------------
 # Group: Constructor
 # ------------------------------------------------------------------------------
 # Function: new
 #
-#   Creates the DM4P::SQL::Dialects::MySQL::Table::Column::Type::Text Object.
+#   Creates an new DBIx::ORMapper::SQL::Query Object.
 #
 # Returns:
 #
-#   DM4P::SQL::Dialects::MySQL::Table::Column::Type::Text
+#   DBIx::ORMapper::SQL::Dialects::MySQL::SELECT
 sub new {
    my $that = shift;
    my $proto = ref($that) || $that;
    my $self = $that->SUPER::new(@_);
    
    bless($self, $proto);
-   
-   $self->{'__sql_type'} = 'text';
-   
    return $self;
 }
+
+sub get_limit {
+   my $self = shift;
+   my $limit = shift;
+
+   return "LIMIT $limit";
+}
+
 
 1;

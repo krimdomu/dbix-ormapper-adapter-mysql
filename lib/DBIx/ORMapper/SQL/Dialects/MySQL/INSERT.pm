@@ -1,20 +1,20 @@
-package DM4P::SQL::Dialects::MySQL::UPDATE;
+package DBIx::ORMapper::SQL::Dialects::MySQL::INSERT;
 
 use strict;
 use warnings;
 
-use base qw(DM4P::SQL::Dialects::MySQL DM4P::SQL::Dialects::Base::UPDATE);
+use base qw(DBIx::ORMapper::SQL::Dialects::MySQL DBIx::ORMapper::SQL::Dialects::Base::INSERT);
 
 # ------------------------------------------------------------------------------
 # Group: Constructor
 # ------------------------------------------------------------------------------
 # Function: new
 #
-#   Creates an new DM4P::SQL::Query Object.
+#   Creates an new DBIx::ORMapper::SQL::Query Object.
 #
 # Returns:
 #
-#   DM4P::SQL::Dialects::MySQL::UPDATE
+#   DBIx::ORMapper::SQL::Dialects::MySQL::INSERT
 sub new {
    my $that = shift;
    my $proto = ref($that) || $that;

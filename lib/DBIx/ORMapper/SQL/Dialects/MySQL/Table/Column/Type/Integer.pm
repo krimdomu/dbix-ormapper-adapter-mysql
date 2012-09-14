@@ -1,22 +1,22 @@
-package DM4P::SQL::Dialects::MySQL::Table::Column::Type::Integer;
+package DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::Integer;
 
 use strict;
 use warnings;
 
-use DM4P::SQL::Table::Column::Type::Base;
+use DBIx::ORMapper::SQL::Table::Column::Type::Base;
 
-use base qw(DM4P::SQL::Table::Column::Type::Base);
+use base qw(DBIx::ORMapper::SQL::Table::Column::Type::Base);
 
 # ------------------------------------------------------------------------------
 # Group: Constructor
 # ------------------------------------------------------------------------------
 # Function: new
 #
-#   Creates the DM4P::SQL::Dialects::MySQL::Table::Column::Type::Integer Object.
+#   Creates the DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::Integer Object.
 #
 # Returns:
 #
-#   DM4P::SQL::Dialects::MySQL::Table::Column::Type::Integer
+#   DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::Integer
 sub new {
    my $that = shift;
    my $proto = ref($that) || $that;

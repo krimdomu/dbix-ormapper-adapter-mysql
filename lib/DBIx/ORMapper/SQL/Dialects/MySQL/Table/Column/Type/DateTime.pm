@@ -1,11 +1,11 @@
-package DM4P::SQL::Dialects::MySQL::Table::Column::Type::DateTime;
+package DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::DateTime;
 
 use strict;
 use warnings;
 
-use DM4P::SQL::Table::Column::Type::Base;
+use DBIx::ORMapper::SQL::Table::Column::Type::Base;
 
-use base qw(DM4P::SQL::Table::Column::Type::Base);
+use base qw(DBIx::ORMapper::SQL::Table::Column::Type::Base);
 use DateTime;
 
 # ------------------------------------------------------------------------------
@@ -13,11 +13,11 @@ use DateTime;
 # ------------------------------------------------------------------------------
 # Function: new
 #
-#   Creates the DM4P::SQL::Dialects::MySQL::Table::Column::Type::DateTime Object.
+#   Creates the DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::DateTime Object.
 #
 # Returns:
 #
-#   DM4P::SQL::Dialects::MySQL::Table::Column::Type::DateTime
+#   DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::DateTime
 sub new {
    my $that = shift;
    my $proto = ref($that) || $that;

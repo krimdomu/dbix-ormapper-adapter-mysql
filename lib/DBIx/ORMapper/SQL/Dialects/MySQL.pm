@@ -1,17 +1,17 @@
-package DM4P::SQL::Dialects::MySQL;
+package DBIx::ORMapper::SQL::Dialects::MySQL;
 
 use strict;
 use warnings;
 
-use DM4P::SQL::Dialects::MySQL::SELECT;
-use DM4P::SQL::Dialects::MySQL::INSERT;
-use DM4P::SQL::Dialects::MySQL::DELETE;
-use DM4P::SQL::Dialects::MySQL::UPDATE;
-use DM4P::SQL::Dialects::MySQL::CREATE;
-use DM4P::SQL::Dialects::MySQL::ALTER;
-use DM4P::SQL::Dialects::MySQL::SQL;
+use DBIx::ORMapper::SQL::Dialects::MySQL::SELECT;
+use DBIx::ORMapper::SQL::Dialects::MySQL::INSERT;
+use DBIx::ORMapper::SQL::Dialects::MySQL::DELETE;
+use DBIx::ORMapper::SQL::Dialects::MySQL::UPDATE;
+use DBIx::ORMapper::SQL::Dialects::MySQL::CREATE;
+use DBIx::ORMapper::SQL::Dialects::MySQL::ALTER;
+use DBIx::ORMapper::SQL::Dialects::MySQL::SQL;
 
-use base qw(DM4P::SQL::Dialects::DialectBase);
+use base qw(DBIx::ORMapper::SQL::Dialects::DialectBase);
 
 sub new {
    my $that = shift;
@@ -45,8 +45,8 @@ sub get_field_type {
 
    return unless($type);
 
-   my $class = "DM4P::SQL::Dialects::MySQL::Table::Column::Type::$type";
-   my $class_file = "DM4P/SQL/Dialects/MySQL/Table/Column/Type/$type.pm";
+   my $class = "DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::$type";
+   my $class_file = "DBIx::ORMapper/SQL/Dialects/MySQL/Table/Column/Type/$type.pm";
    
    eval {
       require $class_file;

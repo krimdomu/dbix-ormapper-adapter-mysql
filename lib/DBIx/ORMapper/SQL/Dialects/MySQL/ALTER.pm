@@ -1,20 +1,20 @@
-package DM4P::SQL::Dialects::MySQL::DELETE;
+package DBIx::ORMapper::SQL::Dialects::MySQL::ALTER;
 
 use strict;
 use warnings;
 
-use base qw(DM4P::SQL::Dialects::MySQL DM4P::SQL::Dialects::Base::DELETE);
+use base qw(DBIx::ORMapper::SQL::Dialects::MySQL DBIx::ORMapper::SQL::Dialects::Base::ALTER);
 
 # ------------------------------------------------------------------------------
 # Group: Constructor
 # ------------------------------------------------------------------------------
 # Function: new
 #
-#   Creates an new DM4P::SQL::Query Object.
+#   Creates an new DBIx::ORMapper::SQL::Query Object.
 #
 # Returns:
 #
-#   DM4P::SQL::Dialects::MySQL::DELETE
+#   DBIx::ORMapper::SQL::Dialects::MySQL::ALTER
 sub new {
    my $that = shift;
    my $proto = ref($that) || $that;
@@ -23,6 +23,5 @@ sub new {
    bless($self, $proto);
    return $self;
 }
-
 
 1;
