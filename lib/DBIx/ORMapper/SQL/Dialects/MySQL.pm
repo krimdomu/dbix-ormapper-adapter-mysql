@@ -46,7 +46,7 @@ sub get_field_type {
    return unless($type);
 
    my $class = "DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::$type";
-   my $class_file = "DBIx::ORMapper/SQL/Dialects/MySQL/Table/Column/Type/$type.pm";
+   my $class_file = "DBIx/ORMapper/SQL/Dialects/MySQL/Table/Column/Type/$type.pm";
    
    eval {
       require $class_file;

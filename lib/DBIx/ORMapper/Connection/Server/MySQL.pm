@@ -44,13 +44,13 @@ sub new {
 sub connect {
    my $self = shift;
 
-   $self->{'__db_connection'} = DBI->connect($self->dsn, $self->username, $self->password);
-   $self->{'__db_connection'}->{mysql_auto_reconnect} = 1;
-   
-   if(!$self->{'__db_connection'}) {
-      DBIx::ORMapper::Exception::Connect->throw(error => 'Cannot connect to Database');
+   eval {
+      $self->{'__db_connection'} = DBI->connect($self->dsn, $self->username, $self->password, {'RaiseError' => 1});
+      $self->{'__db_connection'}->{mysql_auto_reconnect} = 1;
+   } or do {
+      DBIx::ORMapper::Exception::Connect->throw(error => 'Cannot connect to Database. (' . $@ . ')');
       return 0;
-   }
+   };
 
    $self->SUPER::connect();
    
