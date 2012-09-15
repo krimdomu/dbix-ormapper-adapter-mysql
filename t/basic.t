@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 18;
+use Test::More tests => 19;
 use Exception::Class;
 
 use_ok 'DBIx::ORMapper';
@@ -89,4 +89,10 @@ my $select2 = SELECT()
                   ->where('#comments.#id=?');
 
 ok($select2->to_s("MySQL") eq "SELECT `title` AS `title`, `email` AS `email`, `comments`.`id` AS `id`, `name` AS `thename` FROM `comments` AS `comments` LEFT JOIN `users` ON `users`.`id` = `comments`.`user_id` WHERE `comments`.`id`=?", "select statement with join");
+
+
+my $drop = DROP()
+               ->table("foo");
+
+ok($drop->to_s("MySQL") eq "DROP TABLE `foo`", "drop table statement");
 

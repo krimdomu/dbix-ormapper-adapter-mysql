@@ -8,6 +8,7 @@ use DBIx::ORMapper::SQL::Dialects::MySQL::INSERT;
 use DBIx::ORMapper::SQL::Dialects::MySQL::DELETE;
 use DBIx::ORMapper::SQL::Dialects::MySQL::UPDATE;
 use DBIx::ORMapper::SQL::Dialects::MySQL::CREATE;
+use DBIx::ORMapper::SQL::Dialects::MySQL::DROP;
 use DBIx::ORMapper::SQL::Dialects::MySQL::ALTER;
 use DBIx::ORMapper::SQL::Dialects::MySQL::SQL;
 
