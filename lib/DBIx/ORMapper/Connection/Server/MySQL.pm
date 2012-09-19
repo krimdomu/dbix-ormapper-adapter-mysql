@@ -45,7 +45,7 @@ sub connect {
    my $self = shift;
 
    eval {
-      $self->{'__db_connection'} = DBI->connect($self->dsn, $self->username, $self->password, {'RaiseError' => 1});
+      $self->{'__db_connection'} = DBI->connect($self->dsn, $self->username, $self->password, {'RaiseError' => 1, PrintError => 0,});
       $self->{'__db_connection'}->{mysql_auto_reconnect} = 1;
    } or do {
       DBIx::ORMapper::Exception::Connect->throw(error => 'Cannot connect to Database. (' . $@ . ')');
