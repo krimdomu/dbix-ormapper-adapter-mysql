@@ -3,11 +3,10 @@ package DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::DateTime;
 use strict;
 use warnings;
 
-use DBIx::ORMapper::SQL::Table::Column::Type::Base;
-use DBIx::ORMapper::SQL::Table::Column::Type::Base;
+use DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::Base;
 use DBIx::ORMapper::Exception::WrongFormat;
 
-use base qw(DBIx::ORMapper::SQL::Table::Column::Type::Base);
+use base qw(DBIx::ORMapper::SQL::Dialects::MySQL::Table::Column::Type::Base);
 use DateTime;
 
 # ------------------------------------------------------------------------------
