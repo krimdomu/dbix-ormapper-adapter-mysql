@@ -11,6 +11,7 @@ use DBIx::ORMapper::SQL::Dialects::MySQL::CREATE;
 use DBIx::ORMapper::SQL::Dialects::MySQL::DROP;
 use DBIx::ORMapper::SQL::Dialects::MySQL::ALTER;
 use DBIx::ORMapper::SQL::Dialects::MySQL::SQL;
+use DBIx::ORMapper::SQL::Dialects::MySQL::LAST_INSERT_ID;
 
 use base qw(DBIx::ORMapper::SQL::Dialects::DialectBase);
 
