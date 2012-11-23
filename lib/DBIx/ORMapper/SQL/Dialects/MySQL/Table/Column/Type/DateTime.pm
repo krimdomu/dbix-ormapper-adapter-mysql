@@ -36,6 +36,11 @@ REDEFINES: {
    no warnings 'redefine';
    sub FETCH {
       my ($self) = @_;
+
+      if($self->{'__data'} eq "0000-00-00 00:00:00") {
+         $self->{'__data'} = "1970-01-01 00:00:00";
+      }
+
       my ($year, $mon, $day, $hour, $min, $sec) = split(/[-: T]/, $self->{'__data'});
 
       my $dt = DateTime->new(
