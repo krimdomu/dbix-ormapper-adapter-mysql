@@ -1,0 +1,23 @@
+Source: dbix-ormapper-adapter-mysql-perl
+Section: admin
+Priority: optional
+Maintainer: Jan Gehring <jan.gehring@gmail.com>
+Build-Depends: debhelper (>= 7),
+                  perl (>= 5.10.0),
+                  libexception-class-perl,
+                  libdbd-mysql-perl,
+                  libwww-perl,
+                  libwant-perl
+Standards-Version: 3.9.1
+Homepage: http://github.com/krimdomu/dbix-ormapper-adapter-mysql
+
+Package: dbix-ormapper-adapter-mysql-perl
+Architecture: all
+Depends: ${misc:Depends},
+            ${perl:Depends},
+            libwww-perl,
+            libexception-class-perl,
+            libdbd-mysql-perl,
+            libwant-perl
+Description: DBIx::ORMapper::Adapter::MySQL
+ MySQL Adapter for DBIx::ORMapper.
