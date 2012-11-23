@@ -37,7 +37,7 @@ my $create = CREATE()->table('blub')
                         ->city('String', key => 1)
                         ->comment('Text')
                      ->end()
-                     ->primary_key('#name');
+                     ->primary_key('name');
 
 ok($create->to_s("MySQL") eq "CREATE TABLE `blub` (`name` varchar(100) DEFAULT 'hi', `age` int, `city` varchar(50), `comment` text, PRIMARY KEY(`name`))", "create statement");
 
